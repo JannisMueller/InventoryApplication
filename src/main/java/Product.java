@@ -5,15 +5,10 @@ import java.util.Random;
 
 public class Product {
 
-    @SerializedName("productName")
    private String productName;
-   @SerializedName("price")
    private double price;
-   @SerializedName("category")
    private String category;
-   @SerializedName("brand")
    private String brand;
-   @SerializedName("productEan13Kod")
    private String productEan13Kod;
 
    Random random = new Random();
@@ -24,10 +19,6 @@ public class Product {
         this.category = category;
         this.brand = brand;
         this.productEan13Kod = createProductCode();
-    }
-
-    public Product() {
-
     }
 
     /*

@@ -8,13 +8,11 @@ import java.util.*;
 
 public class Main {
 
-
     public static ArrayList<Product> productArrayList = new ArrayList<>();
 
     public static String[] categories = {"fruit", "meat", "frozen goods", "dry goods"};
 
     public static Scanner scanner = new Scanner(System.in);
-
 
     public static void main(String[] args) throws Exception {
 
@@ -63,7 +61,6 @@ public class Main {
         }
         return null;
     }
-
     /*
      * lets the user choose the category of the product
      * @return chosen category
@@ -91,13 +88,11 @@ public class Main {
         }
         return null;
     }
-
     /*
      * Saves arraylist in Json file
      * @param arrayList
      * @throws IOException
      */
-
     public static void saveAsJsonFile(ArrayList arrayList) throws IOException {
         Gson g = new GsonBuilder().setPrettyPrinting().create();
         Writer writer = new FileWriter("productlist", true);
@@ -107,7 +102,6 @@ public class Main {
         writer.close();
 
     }
-
     /*
      * Reads Json file and prints the content to console
      * @throws IOException

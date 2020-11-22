@@ -111,4 +111,17 @@
       "haveNextNextGaussian": false
     }
   }
+][
+  {
+    "productName": "Jannis",
+    "price": 4556.93,
+    "category": "meat",
+    "brand": "Apple",
+    "productEan13Kod": "4789866080213",
+    "random": {
+      "seed": 136268530723808,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  }
 ]
