@@ -29,7 +29,6 @@ public class Controller {
 
         writer.flush();
         writer.close();
-
     }
 
     public static ArrayList<Product> loadArrayListFromJson() {

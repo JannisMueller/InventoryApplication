@@ -1,7 +1,9 @@
 import jannis.Classes.Product;
+import jannis.Classes.Purchase;
 import jannis.Controller.Controller;
 import java.util.*;
 
+import static jannis.Classes.Purchase.*;
 import static jannis.Controller.Controller.categories;
 import static jannis.Controller.Controller.productArrayList;
 
@@ -14,16 +16,26 @@ public class Main {
         //reads in existing Json file
         Controller.loadArrayListFromJson();
 
-        //search for item and returns object
-        System.out.println("Which article do you want to add to your cart?");
+//        //search for item and returns object
+//        System.out.println("Which article do you want to add to your cart?");
+//        String input = scanner.nextLine();
+//        System.out.println(Controller.searchItem(productArrayList,input).getBrand());
+//
+//
+//        //creates new objects and add them to Arraylist
+//        createProduct();
+//
+//        //saves the arraylist to the Json-file
+//        Controller.saveAsJsonFile(productArrayList);
+        System.out.println("input");
         String input = scanner.nextLine();
-        System.out.println(Controller.searchItem(productArrayList,input).getBrand());
 
-        //creates new objects and add them to Arraylist
-        createProduct();
+        addProductToPurchaseList(getProductForPurchase(input));
+        for(int i = 0; i < purchaseList.size(); i++){
+            System.out.println(purchaseList.get(i).getPrice());
+        }
 
-        //saves the arraylist to the Json-file
-        Controller.saveAsJsonFile(productArrayList);
+
     }
 
     /*
