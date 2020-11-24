@@ -1,0 +1,70 @@
+[
+  {
+    "productName": "Janis",
+    "price": 22.0,
+    "category": "frozen goods",
+    "brand": "2",
+    "productEan13Kod": "4318374607725",
+    "random": {
+      "seed": 40741622919377,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "2",
+    "price": 2.0,
+    "category": "frozen goods",
+    "brand": "2",
+    "productEan13Kod": "7523601950642",
+    "random": {
+      "seed": 102483320241189,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "4",
+    "price": 4.0,
+    "brand": "4",
+    "productEan13Kod": "6820138911035",
+    "random": {
+      "seed": 45903381204201,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "5",
+    "price": 5.0,
+    "brand": "5",
+    "productEan13Kod": "6115097277463",
+    "random": {
+      "seed": 30073050016952,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "Jannis",
+    "price": 2.0,
+    "category": "frozen goods",
+    "brand": "2",
+    "random": {
+      "seed": 95206431620262,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "",
+    "price": 2.0,
+    "category": "frozen goods",
+    "brand": "2",
+    "random": {
+      "seed": 77108674632630,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  }
+]

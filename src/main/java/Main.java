@@ -1,54 +1,57 @@
-import com.google.gson.*;
-import org.json.simple.parser.ParseException;
-
-
-import java.io.*;
-
+import jannis.Classes.Product;
+import jannis.Controller.Controller;
 import java.util.*;
+
+import static jannis.Controller.Controller.categories;
+import static jannis.Controller.Controller.productArrayList;
 
 public class Main {
 
-    public static ArrayList<Product> productArrayList = new ArrayList<>();
-
-    public static String[] categories = {"fruit", "meat", "frozen goods", "dry goods"};
-
-    public static Scanner scanner = new Scanner(System.in);
+   private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
 
         //reads in existing Json file
-        readJsonFile();
+        Controller.loadArrayListFromJson();
+
+        //search for item and returns object
+        System.out.println("Which article do you want to add to your cart?");
+        String input = scanner.nextLine();
+        System.out.println(Controller.searchItem(productArrayList,input).getBrand());
+
         //creates new objects and add them to Arraylist
-        Product product = createProduct();
+        createProduct();
+
         //saves the arraylist to the Json-file
-        saveAsJsonFile(productArrayList);
+        Controller.saveAsJsonFile(productArrayList);
     }
 
     /*
-     * Creates a new object Product
-     * @return create Product
+     * Creates a new object jannis.Classes.Product
+     * @return create jannis.Classes.Product
      */
-    public static Product createProduct() throws Exception {
+    private static Product createProduct(){
 
         boolean exitProductCreation = false;
 
         while (!exitProductCreation) {
 
+            Product product = new Product();
+
             System.out.print("Name: ");
 
-            String productName = scanner.nextLine();
+            product.setProductName(scanner.nextLine());
 
             System.out.print("Price: ");
-            double price = scanner.nextDouble();
+            product.setPrice(scanner.nextDouble());
             scanner.nextLine();
 
             System.out.println("Category: ");
-            String category = choseProductCategory();
+            product.setCategory(choseProductCategory());
 
             System.out.print("Brand: ");
-            String brand = scanner.nextLine();
+            product.setBrand(scanner.nextLine());
 
-            Product product = new Product(productName, price, category, brand);
             productArrayList.add(product);
 
             System.out.println("Do you want to add another item? Press x when you are finished!");
@@ -61,11 +64,12 @@ public class Main {
         }
         return null;
     }
+
     /*
      * lets the user choose the category of the product
      * @return chosen category
      */
-    public static String choseProductCategory() {
+    private static String choseProductCategory() {
 
         for (int i = 0; i < categories.length; i++) {
             System.out.println("Press " + i + " for " + categories[i]);
@@ -88,42 +92,6 @@ public class Main {
         }
         return null;
     }
-    /*
-     * Saves arraylist in Json file
-     * @param arrayList
-     * @throws IOException
-     */
-    public static void saveAsJsonFile(ArrayList arrayList) throws IOException {
-        Gson g = new GsonBuilder().setPrettyPrinting().create();
-        Writer writer = new FileWriter("productlist", true);
-        g.toJson(arrayList, writer);
 
-        writer.flush();
-        writer.close();
-
-    }
-    /*
-     * Reads Json file and prints the content to console
-     * @throws IOException
-     * @throws ParseException
-     */
-    public static void readJsonFile() throws IOException, ParseException {
-        try {
-            FileReader reader = new FileReader("/Users/jannismuller/Documents/Jannis/It-högskolan/ownProjects/LagerHanteringsApp/productlist");
-            BufferedReader bufferedReader = new BufferedReader(reader);
-
-            String line;
-
-            while ((line = bufferedReader.readLine()) != null) {
-                System.out.println(line);
-            }
-            reader.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Could not find file!");
-        }
-    }
 }
-
 

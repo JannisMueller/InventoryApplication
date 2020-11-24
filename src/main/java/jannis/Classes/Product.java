@@ -1,3 +1,5 @@
+package jannis.Classes;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Iterator;
@@ -21,6 +23,9 @@ public class Product {
         this.productEan13Kod = createProductCode();
     }
 
+    public Product() {
+    }
+
     /*
      *Create EAN-13 product ID
      * @return  unique EAN 13 code
@@ -37,7 +42,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "jannis.Classes.Product{" +
                 "productName='" + productName + '\'' +
                 ", price=" + price +
                 ", category='" + category + '\'' +
@@ -46,6 +51,8 @@ public class Product {
                 ", random=" + random +
                 '}';
     }
+
+
 
 
 
