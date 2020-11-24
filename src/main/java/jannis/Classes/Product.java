@@ -24,6 +24,7 @@ public class Product {
     }
 
     public Product() {
+        this.productEan13Kod = createProductCode();
     }
 
     /*

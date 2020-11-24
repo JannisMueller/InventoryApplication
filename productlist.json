@@ -50,6 +50,7 @@
     "price": 2.0,
     "category": "frozen goods",
     "brand": "2",
+    "productEan13Kod": "1372069588712",
     "random": {
       "seed": 95206431620262,
       "nextNextGaussian": 0.0,
@@ -61,8 +62,68 @@
     "price": 2.0,
     "category": "frozen goods",
     "brand": "2",
+    "productEan13Kod": "3563179687652",
     "random": {
       "seed": 77108674632630,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "Jannis",
+    "price": 2.0,
+    "category": "frozen goods",
+    "brand": "2",
+    "productEan13Kod": "1171359924637",
+    "random": {
+      "seed": 64920860824433,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "Tea",
+    "price": 23.45,
+    "category": "dry goods",
+    "brand": "Melita",
+    "productEan13Kod": "8482873457188",
+    "random": {
+      "seed": 255190288731280,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "Jannis",
+    "price": 23.78,
+    "category": "frozen goods",
+    "brand": "Albert",
+    "productEan13Kod": "9508429360274",
+    "random": {
+      "seed": 183473334487631,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "Lössnus",
+    "price": 34.0,
+    "category": "dry goods",
+    "brand": "General",
+    "productEan13Kod": "6408067419718",
+    "random": {
+      "seed": 281286842575837,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "7",
+    "price": 7.0,
+    "brand": "7",
+    "productEan13Kod": "2545893428389",
+    "random": {
+      "seed": 15229017086847,
       "nextNextGaussian": 0.0,
       "haveNextNextGaussian": false
     }

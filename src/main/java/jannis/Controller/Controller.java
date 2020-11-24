@@ -78,7 +78,7 @@ public class Controller {
                 return arrayList.get(i);
             }
         }
-        System.out.println("jannis.Classes.Product not found!");
+        System.out.println("Product not found!");
         return null;
     }
 }
