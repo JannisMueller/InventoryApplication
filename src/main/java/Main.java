@@ -1,15 +1,13 @@
 import jannis.Classes.Product;
 import jannis.Controller.Controller;
-
 import java.io.IOException;
 import java.util.*;
-
 import static jannis.Classes.Purchase.*;
 import static jannis.Controller.Controller.*;
 
 public class Main {
 
-   private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
         //reads in existing Json file with all items on stock
@@ -114,7 +112,9 @@ public class Main {
                     String inputOrder = scanner.nextLine();
                     Product productToBePurchases = printOutSearchedProduct(inputOrder);
                     addProductToPurchaseList(productToBePurchases);
-                    System.out.println(productToBePurchases.getProductName() + " was added to cart");
+                    System.out.println("<<<<Order>>>>");
+                    Controller.printArrayList(purchaseList);
+                    System.out.println("Total sum of Order: " +  getTotalSumOrder());
                     continue;
 
                 case "3":
