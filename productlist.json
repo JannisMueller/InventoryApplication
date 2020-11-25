@@ -127,5 +127,29 @@
       "nextNextGaussian": 0.0,
       "haveNextNextGaussian": false
     }
+  },
+  {
+    "productName": "werder",
+    "price": 23.45,
+    "category": "frozen goods",
+    "brand": "fre",
+    "productEan13Kod": "7988049842095",
+    "random": {
+      "seed": 32396081289323,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "kaffe",
+    "price": 56.66,
+    "category": "dry goods",
+    "brand": "melita",
+    "productEan13Kod": "2480473742976",
+    "random": {
+      "seed": 264789066544917,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
   }
 ]

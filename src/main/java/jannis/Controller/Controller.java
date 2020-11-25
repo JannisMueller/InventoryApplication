@@ -54,16 +54,18 @@ public class Controller {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return new ArrayList<Product>();
+        return new ArrayList<>();
     }
 
-    private static void printArrayList(ArrayList<Product> printArrayList) {
+    public static void printArrayList(ArrayList<Product> printArrayList) {
         if (null != printArrayList) {
-            for (Product product : printArrayList) {
-                System.out.println("jannis.Classes.Product: " + product.getProductName());
-                System.out.println("Price: " + product.getPrice() + " SEK");
-                System.out.println("Category: " + product.getCategory());
-                System.out.println("Brand: " + product.getBrand());
+            for (int i = 0; i<printArrayList.size();i++){
+                System.out.println("Item " + (i+1));
+                System.out.println("Product: " + printArrayList.get(i).getProductName());
+                System.out.println("Price: " + printArrayList.get(i).getPrice() + " SEK");
+                System.out.println("Category: " + printArrayList.get(i).getCategory());
+                System.out.println("Brand: " + printArrayList.get(i).getBrand() + "\n");
+
             }
         } else {
             System.out.println("ArrayList is empty.");
@@ -73,9 +75,9 @@ public class Controller {
 
     public static Product searchItem(ArrayList<Product> arrayList, String input) {
 
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (arrayList.get(i).getProductName().equalsIgnoreCase(input)) {
-                return arrayList.get(i);
+        for (Product product : arrayList) {
+            if (product.getProductName().equalsIgnoreCase(input)) {
+                return product;
             }
         }
         System.out.println("Product not found!");

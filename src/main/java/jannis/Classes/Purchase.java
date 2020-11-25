@@ -23,7 +23,9 @@ public class Purchase {
 
    public static void addProductToPurchaseList(Product product){
         purchaseList.add(product);
-    }
+        System.out.println(product.getProductName() + " was added to cart\n");
+
+   }
 
 }
 

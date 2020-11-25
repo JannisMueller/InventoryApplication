@@ -1,37 +1,32 @@
 import jannis.Classes.Product;
-import jannis.Classes.Purchase;
 import jannis.Controller.Controller;
 
 import java.io.IOException;
 import java.util.*;
 
 import static jannis.Classes.Purchase.*;
-import static jannis.Controller.Controller.categories;
-import static jannis.Controller.Controller.productArrayList;
+import static jannis.Controller.Controller.*;
 
 public class Main {
 
-   private static Scanner scanner = new Scanner(System.in);
+   private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-
-        //reads in existing Json file
+        //reads in existing Json file with all items on stock
         Controller.loadArrayListFromJson();
+        //load menu
         menu();
-
-
-
     }
 
     /*
      * Creates a new object jannis.Classes.Product
      * @return create jannis.Classes.Product
      */
-    private static Product createProduct(){
+    private static void createProduct(){
 
-        boolean exitProductCreation = false;
+        boolean exitProductCreation = true;
 
-        while (!exitProductCreation) {
+        while (exitProductCreation) {
 
             Product product = new Product();
 
@@ -53,15 +48,12 @@ public class Main {
 
             System.out.println("Do you want to add another item? Press x when you are finished!");
             String exitProgram = scanner.nextLine();
+
             if (exitProgram.equalsIgnoreCase("x")) {
                 break;
-            } else
-                continue;
-
+            }
         }
-        return null;
     }
-
     /*
      * lets the user choose the category of the product
      * @return chosen category
@@ -90,7 +82,6 @@ public class Main {
         }
         return null;
     }
-
     private  static void menu() throws IOException {
 
         boolean exitProgram = true;
@@ -100,9 +91,9 @@ public class Main {
             System.out.println("-----------------------------------------");
             System.out.println(
                             "Press 1 for adding a product to the warehouse\n" +
-                            "Press 2 for creating a new order\n" +
+                            "Press 2 for  adding article to order\n" +
                             "Press 3 for searching a stock on item\n" +
-                            "Press 4 for printing out the current order list\n" +
+                            "Press 4 for closing and printing out the current order \n" +
                             "Press x for quiting the program");
             System.out.println("-----------------------------------------");
             String choiceMenu = scanner.nextLine();
@@ -133,7 +124,6 @@ public class Main {
                     printOutSearchedProduct(inputSearch);
                     continue;
 
-
                 case "x":
                     System.out.println("Program is shutting down....");
                     exitProgram = false;
@@ -141,18 +131,28 @@ public class Main {
             }
         }
     }
-        private static Product printOutSearchedProduct(String input){
+    private static Product printOutSearchedProduct(String input){
+            //searching for the product to purchased
             Product searchedProduct = Controller.searchItem(productArrayList,input);
+
+            assert searchedProduct != null;
             System.out.print(
                     "Name: " + searchedProduct.getProductName() + "\n" +
                             "Price: " + searchedProduct.getPrice() + "\n" +
                             "Category: " + searchedProduct.getCategory() + "\n" +
                             "Brand: " +  searchedProduct.getBrand() + "\n" +
-                            "EAN-13 code: " + searchedProduct.getProductEan13Kod() + "\n");
+                            "EAN-13 code: " + searchedProduct.getProductEan13Kod() + "\n" +
+                            "-----------------------------------------------------" + "\n");
 
             return searchedProduct;
         }
-
+    private static double getTotalSumOrder(){
+            double sum = 0;
+            for(int i = 0; i < purchaseList.size();i++){
+                sum = sum + purchaseList.get(i).getPrice();
+            }
+            return sum;
+            }
 
 }
 

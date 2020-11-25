@@ -1,28 +1,18 @@
 package jannis.Classes;
 
-import com.google.gson.annotations.SerializedName;
-
-import java.util.Iterator;
 import java.util.Random;
 
 public class Product {
 
-   private String productName;
-   private double price;
-   private String category;
-   private String brand;
-   private String productEan13Kod;
+    private String productName;
+    private double price;
+    private String category;
+    private String brand;
+    private final String productEan13Kod;
 
-   Random random = new Random();
+    Random random = new Random();
 
-    public Product(String productName, double price, String category, String brand) {
-        this.productName = productName;
-        this.price = price;
-        this.category = category;
-        this.brand = brand;
-        this.productEan13Kod = createProductCode();
-    }
-
+    //constructor
     public Product() {
         this.productEan13Kod = createProductCode();
     }
@@ -31,14 +21,14 @@ public class Product {
      *Create EAN-13 product ID
      * @return  unique EAN 13 code
      */
-    private String createProductCode(){
+    private String createProductCode() {
         int len = 13;
-        String ean13 = "";
+        StringBuilder ean13 = new StringBuilder();
 
-        for(int i = 0; i < len; i++){
-            ean13 += ((Integer) random.nextInt(10)).toString();
+        for (int i = 0; i < len; i++) {
+            ean13.append(((Integer) random.nextInt(10)).toString());
         }
-        return ean13;
+        return ean13.toString();
     }
 
     @Override
@@ -52,9 +42,6 @@ public class Product {
                 ", random=" + random +
                 '}';
     }
-
-
-
 
 
     public String getProductName() {
@@ -91,21 +78,5 @@ public class Product {
 
     public String getProductEan13Kod() {
         return productEan13Kod;
-    }
-
-    public void setProductEan13Kod(String productEan13Kod) {
-        this.productEan13Kod = productEan13Kod;
-    }
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
-
-    public Iterator getAllHeaders() {
-        return null;
     }
 }
