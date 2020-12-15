@@ -11,6 +11,7 @@ public class Purchase {
 
     private String orderNumber;
     private double totalSum;
+
     public static ArrayList<Product> purchaseList = new ArrayList<Product>();
 
     public Purchase() {

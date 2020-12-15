@@ -32,6 +32,10 @@ public class Main {
 
             product.setProductName(scanner.nextLine());
 
+            System.out.print("Units in Stock at registration: ");
+            product.setStock(scanner.nextInt());
+            scanner.nextLine();
+
             System.out.print("Price: ");
             product.setPrice(scanner.nextDouble());
             scanner.nextLine();
@@ -89,9 +93,8 @@ public class Main {
             System.out.println("-----------------------------------------");
             System.out.println(
                             "Press 1 for adding a product to the warehouse\n" +
-                            "Press 2 for  adding article to order\n" +
-                            "Press 3 for searching a stock on item\n" +
-                            "Press 4 for closing and printing out the current order \n" +
+                            "Press 2 Creating an order\n" +
+                            "Press 3 for searching a stock item\n" +
                             "Press x for quiting the program");
             System.out.println("-----------------------------------------");
             String choiceMenu = scanner.nextLine();
@@ -107,15 +110,31 @@ public class Main {
                     continue;
 
                 case "2":
+                    boolean exitOrder = true;
+                    do {
 
-                    System.out.print("Article do add to new order: \n");
-                    String inputOrder = scanner.nextLine();
-                    Product productToBePurchases = printOutSearchedProduct(inputOrder);
-                    addProductToPurchaseList(productToBePurchases);
-                    System.out.println("<<<<Order>>>>");
-                    Controller.printArrayList(purchaseList);
-                    System.out.println("Total sum of Order: " +  getTotalSumOrder());
-                    continue;
+                        System.out.print("Article do add to new order: \n");
+                        String inputOrder = scanner.nextLine();
+                        System.out.print("How many units? \n");
+                        int unitsToTakeFromStock = scanner.nextInt();
+                        scanner.nextLine();
+                        Product productToBePurchases = printOutSearchedProduct(inputOrder);
+                        productToBePurchases.setStock(changesInStock(productToBePurchases, unitsToTakeFromStock));
+                        addProductToPurchaseList(productToBePurchases);
+                        System.out.println("<<<<Order>>>>");
+                        Controller.printArrayList(purchaseList);
+                        System.out.println("Total sum of Order: " + getTotalSumOrder());
+
+                        System.out.println("Press x for finishing up the order or any other button to adding more articles");
+                        String exit = scanner.nextLine();
+                        if (exit.equalsIgnoreCase("x")) {
+                            exitOrder = false;
+                        }
+
+                    } while (exitOrder);
+
+                    System.out.println("Order saved to system and will processed by the warehouse soon");
+                    break;
 
                 case "3":
                     //search for item and returns object
@@ -139,6 +158,7 @@ public class Main {
             System.out.print(
                     "Name: " + searchedProduct.getProductName() + "\n" +
                             "Price: " + searchedProduct.getPrice() + "\n" +
+                            "Units in stock: " + searchedProduct.getStock() + "\n" +
                             "Category: " + searchedProduct.getCategory() + "\n" +
                             "Brand: " +  searchedProduct.getBrand() + "\n" +
                             "EAN-13 code: " + searchedProduct.getProductEan13Kod() + "\n" +

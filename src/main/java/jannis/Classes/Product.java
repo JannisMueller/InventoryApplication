@@ -9,6 +9,7 @@ public class Product {
     private String category;
     private String brand;
     private final String productEan13Kod;
+    private int stock;
 
     Random random = new Random();
 
@@ -30,6 +31,7 @@ public class Product {
         }
         return ean13.toString();
     }
+
 
     @Override
     public String toString() {
@@ -78,5 +80,13 @@ public class Product {
 
     public String getProductEan13Kod() {
         return productEan13Kod;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }

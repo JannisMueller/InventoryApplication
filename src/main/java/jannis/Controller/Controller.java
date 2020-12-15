@@ -62,6 +62,7 @@ public class Controller {
             for (int i = 0; i<printArrayList.size();i++){
                 System.out.println("Item " + (i+1));
                 System.out.println("Product: " + printArrayList.get(i).getProductName());
+                System.out.println("Units in stock after purchase: " + printArrayList.get(i).getStock());
                 System.out.println("Price: " + printArrayList.get(i).getPrice() + " SEK");
                 System.out.println("Category: " + printArrayList.get(i).getCategory());
                 System.out.println("Brand: " + printArrayList.get(i).getBrand() + "\n");
@@ -71,6 +72,11 @@ public class Controller {
             System.out.println("ArrayList is empty.");
         }
 
+    }
+
+    public static int changesInStock(Product product, int boughtUnits){
+        int newStock = product.getStock() - boughtUnits;
+        return newStock;
     }
 
     public static Product searchItem(ArrayList<Product> arrayList, String input) {

@@ -1,153 +1,52 @@
 [
   {
-    "productName": "Janis",
-    "price": 22.0,
-    "category": "frozen goods",
-    "brand": "2",
-    "productEan13Kod": "4318374607725",
-    "random": {
-      "seed": 40741622919377,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "2",
-    "price": 2.0,
-    "category": "frozen goods",
-    "brand": "2",
-    "productEan13Kod": "7523601950642",
-    "random": {
-      "seed": 102483320241189,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "4",
-    "price": 4.0,
-    "brand": "4",
-    "productEan13Kod": "6820138911035",
-    "random": {
-      "seed": 45903381204201,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "5",
-    "price": 5.0,
-    "brand": "5",
-    "productEan13Kod": "6115097277463",
-    "random": {
-      "seed": 30073050016952,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "Jannis",
-    "price": 2.0,
-    "category": "frozen goods",
-    "brand": "2",
-    "productEan13Kod": "1372069588712",
-    "random": {
-      "seed": 95206431620262,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "",
-    "price": 2.0,
-    "category": "frozen goods",
-    "brand": "2",
-    "productEan13Kod": "3563179687652",
-    "random": {
-      "seed": 77108674632630,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "Jannis",
-    "price": 2.0,
-    "category": "frozen goods",
-    "brand": "2",
-    "productEan13Kod": "1171359924637",
-    "random": {
-      "seed": 64920860824433,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "Tea",
-    "price": 23.45,
+    "productName": "Snus",
+    "price": 23.0,
     "category": "dry goods",
-    "brand": "Melita",
-    "productEan13Kod": "8482873457188",
+    "brand": "Knox",
+    "productEan13Kod": "6878512952199",
+    "stock": 10,
     "random": {
-      "seed": 255190288731280,
+      "seed": 239421732857599,
       "nextNextGaussian": 0.0,
       "haveNextNextGaussian": false
     }
   },
   {
-    "productName": "Jannis",
-    "price": 23.78,
-    "category": "frozen goods",
-    "brand": "Albert",
-    "productEan13Kod": "9508429360274",
-    "random": {
-      "seed": 183473334487631,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "Lössnus",
-    "price": 34.0,
+    "productName": "Pasta",
+    "price": 30.0,
     "category": "dry goods",
-    "brand": "General",
-    "productEan13Kod": "6408067419718",
+    "brand": "Barilla",
+    "productEan13Kod": "9503321899814",
+    "stock": 18,
     "random": {
-      "seed": 281286842575837,
+      "seed": 64168429469502,
       "nextNextGaussian": 0.0,
       "haveNextNextGaussian": false
     }
   },
   {
-    "productName": "7",
-    "price": 7.0,
-    "brand": "7",
-    "productEan13Kod": "2545893428389",
-    "random": {
-      "seed": 15229017086847,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "werder",
-    "price": 23.45,
-    "category": "frozen goods",
-    "brand": "fre",
-    "productEan13Kod": "7988049842095",
-    "random": {
-      "seed": 32396081289323,
-      "nextNextGaussian": 0.0,
-      "haveNextNextGaussian": false
-    }
-  },
-  {
-    "productName": "kaffe",
-    "price": 56.66,
+    "productName": "Kaffe",
+    "price": 56.3,
     "category": "dry goods",
-    "brand": "melita",
-    "productEan13Kod": "2480473742976",
+    "brand": "Jacobs",
+    "productEan13Kod": "0765391610181",
+    "stock": 22,
     "random": {
-      "seed": 264789066544917,
+      "seed": 203853593472590,
+      "nextNextGaussian": 0.0,
+      "haveNextNextGaussian": false
+    }
+  },
+  {
+    "productName": "Pasta",
+    "price": 30.0,
+    "category": "dry goods",
+    "brand": "Barilla",
+    "productEan13Kod": "9503321899814",
+    "stock": 18,
+    "random": {
+      "seed": 64168429469502,
       "nextNextGaussian": 0.0,
       "haveNextNextGaussian": false
     }
